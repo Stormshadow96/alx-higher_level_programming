@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Square module."""
 
+
 class Square:
     """Defines a square."""
 
@@ -28,7 +29,7 @@ class Square:
             raise TypeError('size must be an integer')
         if value < 0:
             raise ValueError('size must be >= 0')
-        self.__size + value
+        self.__size = value
 
     def area(self):
         """Area of this square.
@@ -50,5 +51,8 @@ class Square:
     def __ge__(self, other):
         return self.area() >= other.area()
 
-    def __le__(self, other):
+    def __lt__(self, other):
         return self.area() < other.area()
+
+    def __le__(self, other):
+        return self.area() <= other.area()
