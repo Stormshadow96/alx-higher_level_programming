@@ -15,12 +15,7 @@ class Square:
 
     @property
     def size(self):
-        """Property for the length of a side of this square.
-
-        Raises:
-            TypeError: If size is not an integer.
-            ValueError: If size is less than 0.
-        """
+        """Get/set the current size of the square."""
         return (self.__size)
 
     @size.setter
@@ -32,12 +27,8 @@ class Square:
         self.__size = value
 
     def area(self):
-        """Area of this square.
-
-        Returns:
-            The size squared.
-        """
-        return self.__size ** 2
+        """Return the current area of the square."""
+        return (self.__size * self.__size)
 
     def __eq__(self, other):
         return self.area() == other.area()
